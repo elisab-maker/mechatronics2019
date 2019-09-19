@@ -1,0 +1,38 @@
+#define sense1 2
+#define sense2 3
+#define buzz 4
+#define count 5
+int state;
+
+void setup() {
+  // Initial setup for sensors and button
+  pinMode(sense1, OUTPUT);
+  pinMode(sense2, OUTPUT):
+  pinMode(buzz, INPUT);
+  // Initialize serial monitor to start
+  Serial.begin(9600);
+  Serial.println("Prepare to make some noise");
+  state = 1;
+}
+
+void loop() {
+  // two state machines
+  // Display #1 if sensor 1 is touched
+  // Display #2 if sensor 2 is touched
+  // Display #3 and activate buzzer if both sensors are touched
+  Sensor1 = digitalRead(sense1);
+  Sensor2 = digitalRead(sense2);
+  switch state
+  {
+    case 1:
+      if(sense1 == HIGH){
+        state = 2;
+        Serial.println("You have activated sensor 1");
+    break;
+      }
+    case 2:
+    break;
+  }
+
+}
+
